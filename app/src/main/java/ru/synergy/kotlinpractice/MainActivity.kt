@@ -78,7 +78,47 @@ class MainActivity : AppCompatActivity() {
             print("arg: ${n*n} \t")
         }
 
+        var range: Any = 1..5  // [1,2,3,4,5] //1+5
+        range = 'a'..'z'
 
+        range = 5 downTo 1 // [5,4,3,2,1]
+        range = 5 downTo 1 step 2 // [5,3,1]
+        range = 1 until 9 // [1-8]
+        range = 1 until 9 step 2
+        range = 2 in 1 until 9 step 2 //false
+        range = 2 in 1 until 9 //true
 
+        for (c in 1..9) print(c)
+
+        val numbers: Array<Int> = arrayOf(1,2,3,4,5,6)
+        val n = numbers[1]
+        numbers[3] = 7
+        print("numbers[2] = ${numbers[2]++}")
+
+        val numbers2 = Array(3, {5}) //[5,5,5]
+
+        var i = 1
+        val numbers3 = Array(4, {i++ *2}) //[2,4,6,8]
+
+        for (number in numbers) print("$number \t")
+
+        val people = arrayOf("Tom", "Sam", "Bob")
+        for (person in people)
+            print("$person \t")
+
+        while (i in people.indices){  // or (i !in people.indices)
+            print("${people[i]} \t")
+            i++          // true or false
+        }
+
+        for (i in people.indices){
+            print("${people[i]} \t")
+        }
+
+        var integers: IntArray = intArrayOf(1,2,3,4,5,6)
+        var doubles: DoubleArray = doubleArrayOf(1.3, 2.4, 3.56)
+
+        integers = IntArray(3, {5})
+        doubles = DoubleArray(5, {1.7})
     }
 }
