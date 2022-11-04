@@ -120,5 +120,7 @@ class MainActivity : AppCompatActivity() {
 
         integers = IntArray(3, {5})
         doubles = DoubleArray(5, {1.7})
+
     }
+
 }
